@@ -89,3 +89,10 @@ if st.button("Generate Document"):
 
     st.subheader("Generated Document")
     st.text_area("Document Preview", document, height=400)
+
+    st.download_button(
+    label="⬇️ Download Document",
+    data=document,
+    file_name=f"{document_type.replace(' ', '_')}.txt",
+    mime="text/plain"
+)
